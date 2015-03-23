@@ -5,9 +5,9 @@ import java.util.Calendar;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import org.boynesoftware.configuration.App;
 import org.boynesoftware.configuration.model.User;
 import org.boynesoftware.configuration.repository.UserRepository;
-import org.boynesoftware.profiles.App;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

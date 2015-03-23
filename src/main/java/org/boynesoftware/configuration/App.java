@@ -1,4 +1,4 @@
-package org.boynesoftware.profiles;
+package org.boynesoftware.configuration;
 
 import java.util.Arrays;
 
