@@ -1,6 +1,7 @@
 package org.boynesoftware.configuration.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,7 +17,7 @@ import javax.validation.constraints.NotNull;
 
 /**
  * Entity to hold a users application profile in terms of how and when the want
- * to receive notifications about applications
+ * to receive notifications about applications.
  * 
  * @author johnwatters
  *
@@ -52,9 +53,10 @@ public class UserApplicationProfile implements Serializable {
 	private NotificationProfile notificationProfile;
 
 	@ManyToOne
-	@JoinColumn
 	private User user;
 
+	@ManyToOne
+	private UserApplication userApplication;
 	
 	private Boolean activated;
 

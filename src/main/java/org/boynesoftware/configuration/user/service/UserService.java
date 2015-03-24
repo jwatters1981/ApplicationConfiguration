@@ -39,8 +39,8 @@ public class UserService implements IUserService
 	 */
 	public UserApplicationProfile getCurrentUserApplicationProfile(String userId, String applicationId) throws UserApplicationProfileException
 	{
-		Preconditions.checkNotNull(userId, ErrorCode.INTERAL_ERROR + " User Id cannot be null");
-		Preconditions.checkNotNull(userId, ErrorCode.INTERAL_ERROR + " Application Id cannot be null");
+		Preconditions.checkArgument(userId != null, ErrorCode.INTERAL_ERROR + " User Id cannot be null");
+		Preconditions.checkArgument(userId != null, ErrorCode.INTERAL_ERROR + " Application Id cannot be null");
 		UserApplicationProfile activeUserApplicationProfile = userRepository.findActiveUserApplicationProfile(userId, applicationId);
 		if (activeUserApplicationProfile == null)
 		{
