@@ -5,7 +5,7 @@ import org.boynesoftware.configuration.exception.UserApplicationProfileException
 import org.boynesoftware.configuration.exception.UserException;
 import org.boynesoftware.configuration.model.User;
 import org.boynesoftware.configuration.model.UserApplicationProfile;
-import org.boynesoftware.configuration.repository.UserRepository;
+import org.boynesoftware.configuration.user.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;

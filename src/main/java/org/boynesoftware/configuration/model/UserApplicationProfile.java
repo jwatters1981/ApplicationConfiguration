@@ -1,7 +1,6 @@
 package org.boynesoftware.configuration.model;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,7 +12,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 
 /**
  * Entity to hold a users application profile in terms of how and when the want
@@ -25,9 +23,9 @@ import javax.validation.constraints.NotNull;
 @Entity
 @NamedQueries({
 		@NamedQuery(name = "UserApplicationProfile.findAll", query = "SELECT c FROM UserApplicationProfile c"),
-		@NamedQuery(name = "UserApplicationProfile.findByUserIdAndApplicationId", query = "SELECT c FROM UserApplicationProfile c WHERE c.application.applicationId = :applicationId and c.user.userId = :userId"),
+		@NamedQuery(name = "UserApplicationProfile.findByUserIdAndApplicationId", query = "SELECT c FROM UserApplicationProfile c WHERE c.application.id = :applicationId and c.user.userId = :userId"),
 		@NamedQuery(name = "UserApplicationProfile.findByUserIdAndApplicationIdAndActive", 
-		query = "SELECT c FROM UserApplicationProfile c WHERE c.application.applicationId = :applicationId and c.user.userId = :userId and c.activated = true") })
+		query = "SELECT c FROM UserApplicationProfile c WHERE c.application.id = :applicationId and c.user.userId = :userId and c.activated = true") })
 @Table(name = "USER_APP_PROFILE")
 public class UserApplicationProfile implements Serializable {
 

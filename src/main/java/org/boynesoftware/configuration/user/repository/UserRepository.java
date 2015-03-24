@@ -1,4 +1,4 @@
-package org.boynesoftware.configuration.repository;
+package org.boynesoftware.configuration.user.repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

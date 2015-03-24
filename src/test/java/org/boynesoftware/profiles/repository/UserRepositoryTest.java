@@ -7,8 +7,7 @@ import javax.persistence.PersistenceContext;
 
 import org.boynesoftware.configuration.App;
 import org.boynesoftware.configuration.model.User;
-import org.boynesoftware.configuration.repository.UserRepository;
-import org.junit.Assert;
+import org.boynesoftware.configuration.user.repository.UserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
